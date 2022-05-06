@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3m)tlh9!mhdp-@*-2nv7q)+c-$e1x5sdt*4_#%cenqbc4y(q!*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mysite.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['mysite.com', '127.0.0.1', 'localhost']
 INSTALLED_APPS = [
     'social_django',
     # 'django_extensions',
-    'sslserver',
+    # 'sslserver',
     'easy_thumbnails',
     'account.apps.AccountConfig',
     'images.apps.ImagesConfig',
@@ -160,3 +160,5 @@ REDIS_DB = 0
 #Heiku Settings
 import django_heroku
 django_heroku.settings(locals())
+
+
