@@ -157,8 +157,4 @@ REDIS_HOST = 'localhost'
 REDIS_PORT = 6655
 REDIS_DB = 0
 
-#Heiku Settings
-import django_heroku
-django_heroku.settings(locals())
-
 
